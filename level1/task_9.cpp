@@ -37,7 +37,7 @@ int main()
     std::cout << "Enter your sort: " << std::endl;
     std::cin >> num;
     
-    void (*f_ptr)(int*, size_t) = nullptr; // Initialize the function pointer
+    void (*f_ptr)(int*, size_t) = nullptr; 
     switch (num) {
         case 1:
             f_ptr = fp_arr[0].f_ptr;
@@ -47,15 +47,15 @@ int main()
             break;
         default:
             std::cout << "Invalid choice." << std::endl;
-            delete[] arr; // Delete allocated memory before returning
+            delete[] arr; 
             return 1;
     }
     
-    f_ptr(arr, size); // Call the selected sorting function
-    print(arr, size); // Print the sorted array
+    f_ptr(arr, size); 
+    print(arr, size); 
     
-    delete[] arr; // Delete allocated memory
-    return 0; // Return 0 to indicate success
+    delete[] arr; 
+    return 0;
 }
 
 void bubble_sort(int* arr, size_t size) {
