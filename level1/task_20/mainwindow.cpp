@@ -13,3 +13,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    int32_t a = ui ->label->text().toInt();
+    a++;
+    ui ->label->setText(QString::number(a));
+}
+
